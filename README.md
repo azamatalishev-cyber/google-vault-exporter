@@ -6,3 +6,5 @@ Cronjob to do the following:
 - Stores export in Google Team Drive
 
 Uses the [GAM application][gam-github].
+
+[gam-github]: https://github.com/taers232c/GAMADV-XTD3
