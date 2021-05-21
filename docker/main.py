@@ -11,10 +11,6 @@ GET_LATEST_ALUMNI_OU_LIST = "/opt/gam/src/gam.py " \
                             "orgUnitPath='/Alumni' > AlumniOU_new.txt"
 GET_ALUMNI_OU_LIST_FROM_DRIVE = '/opt/gam/src/gam.py ' \
                                 'user ' \
-                                'docker-gam@docker-gam-275723.iam' \
-                                '.gserviceaccount.com get ' \
-                                'drivefile id ' \
-                                '1HNF9-wh7Mawgab5FSL5crMqU1FfGI8PDZx7_bIPx' \
                                 '-ZA format txt targetfolder ' \
                                 '/opt/gam/src/'
 INITIATE_MAIL_EXPORT = '/opt/gam/src/gam.py create ' \
@@ -30,7 +26,6 @@ DOWNLOAD_EXPORT = '/opt/gam/src/gam.py download ' \
                   'targetfolder ' \
                   '/tmp/'
 UPLOAD_EXPORT = '/opt/gam/src/gam.py user ' \
-                'docker-gam@docker-gam-275723.iam.gserviceaccount.com add ' \
                 'drivefile ' \
                 'localfile ' \
                 '/tmp/{} parentid {} '
@@ -38,17 +33,14 @@ UPDATE_DRIVE_FILE = \
     '/opt/gam/src/gam.py user ' \
     'docker-gam@docker-gam-275723.iam.gserviceaccount.com update drivefile ' \
     'id ' \
-    '1HNF9-wh7Mawgab5FSL5crMqU1FfGI8PDZx7_bIPx-ZA localfile ' \
     'AlumniOU_new.txt newfilename AlumniOU.txt'
 CREATE_FOLDER_IN_DRIVE = "/opt/gam/src/gam.py user " \
-                         "docker-gam@docker-gam-275723.iam.gserviceaccount" \
                          ".com create " \
                          "drivefile " \
                          "drivefilename '{}' mimetype gfolder parentid " \
                          "0AOOb5eIIkqg5Uk9PVA "
 CHECK_IF_FILE_EXISTS = \
     "/opt/gam/src/gam.py user " \
-    "docker-gam@docker-gam-275723.iam.gserviceaccount.com show filelist " \
     "corpora " \
     "onlyteamdrives filenamematchpattern '{}' "
 MAIL_EXPORT_NAME = '{}.mail'
